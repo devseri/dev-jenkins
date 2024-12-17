@@ -42,7 +42,7 @@ pipeline {
 
         stage('BuildDockerImage') {
             steps {
-                sh 'cd py_continuous_integration; . ~/py_envs/bin/activate; docker build -t ankita292/cont-i-img:v5 .'
+                sh 'cd py_continuous_integration; . ~/py_envs/bin/activate; docker build -t ankita292/cont-i-img:v6 .'
             }
         }
 
@@ -54,7 +54,7 @@ pipeline {
 
         stage('PushDockerImage') {
             steps {
-                sh 'cd py_continuous_integration; docker push ankita292/cont-i-img:v5'
+                sh 'cd py_continuous_integration; docker push ankita292/cont-i-img:v6'
             }
         }
     }
